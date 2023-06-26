@@ -315,7 +315,7 @@ main{
     display: block;
     width: 20px; /* Set the desired width of the dots */
     height:20px; /* Set the desired height of the dots */
-    background-color: #343740; /* Set the desired color of the dots */
+    background-color: #575757; /* Set the desired color of the dots */
     border-radius: 50%; /* Make the dots circular */
     margin: 4px 0; /* Adjust the spacing between the dots */
 }
@@ -334,9 +334,92 @@ main{
     
     position: fixed;
     bottom: 0;
-    width: 30vw;
+    width: 25vw;
     right: 100px;
     
 
 }
 /***************** END CREW ***************/
+
+/* ********************Technology******************** */
+.technology{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url("./assets/technology/background-technology-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.technology-container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.text-space-lunch-101{
+ width: 50%;
+ text-align: center;
+}
+.technology-inner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+
+}
+/* Techonology left col */
+.technology-inner-container-left-col{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+
+}
+.technology-vertical-menu{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.technology-vertical-menu > a{
+    text-decoration: none;
+}
+.technology-vertical-menu-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b0d19;
+    color: white;
+    border: 1px solid var(--line-break);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    padding: 20px;
+}
+.technology-vertical-menu-number-active{
+    background-color: var(--white);
+    color: #0b0d19;
+}
+.technology-text-left-col{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    
+}
+
+/* technology right col */
+.technology-inner-container-right-col{
+    display: flex;
+justify-content: flex-end;
+    width: 40%;
+}
+
+
+/* ********************end Technology******************** */
