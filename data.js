@@ -1,5 +1,4 @@
-{
-  "destinations": [
+export const destinations = [
     {
       "name": "Moon",
       "images": {
@@ -40,8 +39,8 @@
       "distance": "1.6 bil. km",
       "travel": "7 years"
     }
-  ],
-  "crew": [
+  ]
+export const crew = [
     {
       "name": "Douglas Hurley",
       "images": {
@@ -78,8 +77,8 @@
       "role": "Flight Engineer",
       "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
     }
-  ],
-  "technology": [
+  ];
+export const technology = [
     {
       "name": "Launch vehicle",
       "images": {
@@ -104,5 +103,4 @@
       },
       "description": "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained."
     }
-  ]
-}
+  ];

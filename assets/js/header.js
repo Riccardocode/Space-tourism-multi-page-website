@@ -15,7 +15,7 @@ function injectHeader() {
                 <strong class="page-number">00</strong> HOME
                 </li>
             </a>
-            <a class="nav-menu-header" href="./destination-moon.html">
+            <a class="nav-menu-header" <a href="./destination.html?planet=${encodeURIComponent("Moon")}">
                 <li><strong class="page-number">01</strong> DESTINATION</li>
             </a>
             <a class="nav-menu-header" href="./crew-commander.html">
