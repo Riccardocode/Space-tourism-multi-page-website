@@ -23,7 +23,7 @@ function injectHeader() {
                 <li><strong class="page-number">02</strong> CREW</li>
             </a>
             
-            <a class="nav-menu-header" href="./technology-vehicle.html">
+            <a class="nav-menu-header" href="./technology.html?tech=${encodeURIComponent("Launch vehicle")}">
                 <li><strong class="page-number">03</strong> TECHNOLOGY</li>
             </a>
             </ul>
