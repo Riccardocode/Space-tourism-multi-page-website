@@ -409,7 +409,7 @@ height: 100%;
 /* ********************end Technology******************** */
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1439px) {
   body{
     height: 100vh;
   }
@@ -440,6 +440,9 @@ height: 100%;
     width: 60%;
     text-align: center;
   }
+  .homepage{
+    background-image: url(./assets/home/background-home-tablet.jpg);
+  }
   .home-paragraph{
     font-size: 15px;
     width: 100%;
@@ -459,6 +462,9 @@ height: 100%;
    /*End Homepage */
 
    /* Destination */
+   .destination-moon{
+    background-image: url("./assets/destination/background-destination-tablet.jpg");
+   }
    .destination-text-pick-your-destination{
     display: none;
    }
@@ -470,6 +476,7 @@ height: 100%;
    }
    .destination-left-col{
     width: 100%;
+    max-width: 700px;
     height: 35vh;
     justify-content: center;
     align-items: center;
@@ -510,24 +517,30 @@ height: 100%;
    /*END Destination */
 
    /* CREW */
+   .crew{
+    background-image: url("./assets/crew/background-crew-tablet.jpg");
+   }
    .crew-container{
     flex-wrap: wrap;
     height: 80vh;
    }
+   .crew-main-container{
+    flex-direction: column;
+   }
    .crew-left-col{
-    width: 100%;
-    height: 35vh;
+    width: 70%;
+    height: 40%;
     text-align: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
    }
    .crew-right-col{
     width: 100%;
-    height: 35vh;
+    height: 60%;
     
    }
    .crew-member-image{
     width: 50%;
+    max-width: 300px;
     height: auto;
     padding: 0;
     margin: 0;
@@ -553,12 +566,16 @@ height: 100%;
    }
    /* End CREW */
    /* Technology */
+   .technology{
+    background-image: url("./assets/technology/background-technology-tablet.jpg");
+   }
    .text-space-lunch-101{
     display: none;
    }
    .technology-inner-container{
     flex-direction: column-reverse;
     width: 100%;
+    height: 100%;
     
    }
    .technology-vertical-menu{
@@ -572,9 +589,11 @@ height: 100%;
     align-items: center;
     width: 100%;
     text-align: center;
+    margin: 20px;
    }
    .technology-inner-container-right-col{
     width: 100%;
+    padding:0;
    }
    .technology-inner-container-right-col img{
     width: 100%;

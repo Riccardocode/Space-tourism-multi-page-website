@@ -10,7 +10,7 @@ function injectCrewMembers(role) {
             <div class="crew-left-col-text">
                 <div class="heading4 text-color1">${crewMember.role}</div>
                 <div class="heading3 text-color-white">${crewMember.name}</div>
-                <div class="subheading1 text-color1" style="width: 80%;">
+                <div class="subheading1 text-color1">
                     ${crewMember.bio}
                 </div>
             </div>
