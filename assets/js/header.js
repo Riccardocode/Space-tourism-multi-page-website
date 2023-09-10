@@ -19,6 +19,7 @@ function injectHeader() {
                 <li><strong class="page-number">01</strong> DESTINATION</li>
             </a>
             <a class="nav-menu-header" href="./crew-commander.html">
+            <a class="nav-menu-header" <a href="./crew.html?role=${encodeURIComponent("Commander")}">
                 <li><strong class="page-number">02</strong> CREW</li>
             </a>
             

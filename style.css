@@ -209,7 +209,7 @@ main {
   flex-direction: column;
   height: 100vh;
 }
-.destination-planet-and-text {
+.destination-planet-and-text, .crew-main-container{
   display: flex;
   justify-content: center;
   align-items: center;
