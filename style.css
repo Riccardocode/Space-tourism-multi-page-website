@@ -69,6 +69,85 @@ body {
 }
 /* End initial setup */
 
+/* CSS for the burger icon */
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #d0d6f9;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+.mobile-menu-toggle {
+  background-color: transparent;
+  border-color: transparent;
+  margin: 20px;
+  z-index: 3;
+}
+
+/* Rotate bars to form an "X" when menu is active */
+.mobile-menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* CSS for the mobile menu */
+.mobile-menu {
+  display: none;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background color with blur effect */
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  height: 100vh;
+}
+
+.mobile-navigation-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-navigation-menu li {
+  padding: 10px;
+  text-align: center;
+}
+
+.mobile-navigation-menu a {
+  text-decoration: none;
+  color: #d0d6f9;
+  display: block;
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+/* Show the mobile menu when the button is clicked */
+.mobile-menu.active {
+  display: block;
+}
+/* End Mobile menu */
+
 .homepage {
   display: flex;
   flex-direction: column;
@@ -81,6 +160,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 header {
   width: 100vw;
   display: flex;
@@ -93,7 +173,9 @@ header {
   color: white;
   padding-left: 40px;
 }
-
+.mobile-menu-toggle {
+  display: none;
+}
 .navigation-bar {
   /* background-color: rgba(70,85,107,0.6); */
   background-color: rgba(17, 39, 77, 0.4);
@@ -133,7 +215,8 @@ header {
   width: 400px;
   align-self: center;
   position: relative;
-  left: 40px;
+  left:10%; /* Remove the left property */
+  right: auto; /* Add the right property to move it to the right */
   z-index: 2;
 }
 
@@ -209,13 +292,12 @@ main {
   flex-direction: column;
   height: 100vh;
 }
-.destination-planet-and-text, .crew-main-container{
+.destination-planet-and-text,
+.crew-main-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
-  
-
 }
 .destination-left-col {
   width: 50%;
@@ -271,7 +353,7 @@ main {
   /* align-items: center; */
   width: 100vw;
   height: 100%;
- 
+
   background-image: url("./assets/crew/background-crew-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -310,9 +392,12 @@ main {
 .crew-inner-dot-menu-active {
   background-color: var(--white);
 }
+.separator-line-mobile{
+ display: none;
+}
 .crew-right-col {
   width: 50%;
-height: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -398,224 +483,291 @@ height: 100%;
   justify-content: flex-end;
   width: 40%;
 }
-.portrait-img{
+.portrait-img {
   display: block;
 }
-.landscape-img{
+.landscape-img {
   display: none;
 }
 
-
 /* ********************end Technology******************** */
 
-
-@media screen and (max-width:1439px) {
-  body{
+@media screen and (max-width: 1439px) {
+  body {
     height: 100vh;
   }
   /* Homepage */
-  .hero{
+  .hero {
     flex-wrap: wrap;
     gap: 40px;
   }
-  header{
+  header {
     width: 100%;
     padding-top: 0;
     height: 20vh;
-
   }
   .navigation-menu {
     gap: 5px;
   }
-  .hero-left-col,.hero-right-col{
+  .hero-left-col,
+  .hero-right-col {
     width: 100%;
     justify-content: center;
     align-items: center;
-    
   }
 
-  .hero-left-col-text-block{
+  .hero-left-col-text-block {
     justify-content: center;
     align-items: center;
     width: 60%;
     text-align: center;
   }
-  .homepage{
+  .homepage {
     background-image: url(./assets/home/background-home-tablet.jpg);
   }
-  .home-paragraph{
+  .home-paragraph {
     font-size: 15px;
     width: 100%;
-
-    
   }
-  .explore{
+  .explore {
     width: 180px;
     height: 180px;
   }
-  .home-travel-text{
+  .home-travel-text {
     display: none;
   }
-  .line-header{
+  .line-header {
     display: none;
   }
-   /*End Homepage */
+  /*End Homepage */
 
-   /* Destination */
-   .destination-moon{
+  /* Destination */
+  .destination-moon {
     background-image: url("./assets/destination/background-destination-tablet.jpg");
-   }
-   .destination-text-pick-your-destination{
+  }
+  .destination-text-pick-your-destination {
     display: none;
-   }
-   .destination-planet-and-text{
+  }
+  .destination-planet-and-text {
     flex-wrap: wrap;
-   }
-   .destination-contaier{
+  }
+  .destination-contaier {
     height: 80vh;
-   }
-   .destination-left-col{
+  }
+  .destination-left-col {
     width: 100%;
     max-width: 700px;
     height: 35vh;
     justify-content: center;
     align-items: center;
-  
-   }
-   .destination-right-col{
+  }
+  .destination-right-col {
     width: 80%;
     height: 35vh;
-    
-   }
-   .planet-image{
+  }
+  .planet-image {
     width: 40%;
     margin: 0;
     padding: 0;
-   }
-   .destination-menu{
+  }
+  .destination-menu {
     justify-content: center;
     padding-bottom: 15px;
-   }
-   .heading1{
+  }
+  .heading1 {
     font-size: 50px;
     text-align: center;
-   }
-   .destination-paragraph{
+  }
+  .destination-paragraph {
     font-size: 15px;
     text-align: center;
-    
-   }
-   .destination-break-line{
+  }
+  .destination-break-line {
     width: 100%;
-   }
-   .heading3{
+  }
+  .heading3 {
     font-size: 35px;
-   }
-   .travel-info{
+  }
+  .travel-info {
     justify-content: space-around;
-   }
-   /*END Destination */
+  }
+  /*END Destination */
 
-   /* CREW */
-   .crew{
+  /* CREW */
+  .crew {
     background-image: url("./assets/crew/background-crew-tablet.jpg");
-   }
-   .crew-container{
+  }
+  .crew-container {
     flex-wrap: wrap;
     height: 80vh;
-   }
-   .crew-main-container{
+  }
+  .crew-main-container {
     flex-direction: column;
-   }
-   .crew-left-col{
+  }
+  .crew-left-col {
     width: 70%;
     height: 40%;
     text-align: center;
     padding: 0;
-   }
-   .crew-right-col{
+  }
+  .crew-right-col {
     width: 100%;
     height: 60%;
-    
-   }
-   .crew-member-image{
+  }
+  .crew-member-image {
     width: 50%;
     max-width: 300px;
     height: auto;
     padding: 0;
     margin: 0;
-    
-    
-   }
-   .heading4{
+  }
+  .heading4 {
     font-size: 24px;
-   }
-   .subheading1 {
+  }
+  .subheading1 {
     font-size: 20px;
-    
-   }
-   .crew-inner-menu{
+  }
+  .crew-inner-menu {
     padding: 0;
     display: flex;
     justify-content: center;
     margin: 10px;
-   }
-   .crew-inner-dot-menu{
+  }
+  .crew-inner-dot-menu {
     width: 10px;
     height: 10px;
-   }
-   /* End CREW */
-   /* Technology */
-   .technology{
+  }
+  /* End CREW */
+  /* Technology */
+  .technology {
     background-image: url("./assets/technology/background-technology-tablet.jpg");
-   }
-   .text-space-lunch-101{
+  }
+  .text-space-lunch-101 {
     display: none;
-   }
-   .technology-inner-container{
+  }
+  .technology-inner-container {
     flex-direction: column-reverse;
     width: 100%;
     height: 100%;
-    
-   }
-   .technology-vertical-menu{
+  }
+  .technology-vertical-menu {
     flex-direction: row;
-   }
- 
- 
-   .technology-inner-container-left-col{
+  }
+
+  .technology-inner-container-left-col {
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 100%;
     text-align: center;
     margin: 20px;
-   }
-   .technology-inner-container-right-col{
+  }
+  .technology-inner-container-right-col {
     width: 100%;
-    padding:0;
-   }
-   .technology-inner-container-right-col img{
+    padding: 0;
+  }
+  .technology-inner-container-right-col img {
     width: 100%;
     size: cover;
-   }
+  }
 
-   .technology-text-left-col .heading3.text-color-white{
+  .technology-text-left-col .heading3.text-color-white {
     width: 100%;
-   }
-   .technology-text-left-col .heading4.text-color1{
-    display: none;
-   }
-   .portrait-img{
+  }
+  .technology-text-left-col .heading4.text-color1 {
     display: none;
   }
-  .landscape-img{
+  .portrait-img {
+    display: none;
+  }
+  .landscape-img {
     display: block;
   }
-  .technology-vertical-menu-number{
+  .technology-vertical-menu-number {
     width: 20px;
     height: 20px;
   }
 
-   /*End Technology */
+  /*End Technology */
+}
+
+@media screen and (max-width: 767px) {
+  /* General changes */
+  .group-line-nav {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  header {
+    height: 10vh;
+  }
+
+  /* Homepage */
+  .homepage {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+  }
+  .hero-left-col-text-block {
+    width: 90%;
+  }
+  .heading1 {
+    font-size: 90px;
+  }
+  main {
+    height: 90vh;
+  }
+  .hero {
+    gap: 25vh;
+  }
+
+  .hero-left-col,
+  .hero-right-col {
+    height: 45%;
+  }
+  /* Destinations */
+  .destination-moon {
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+    height: 120vh;
+  }
+  body {
+    height: 100vh;
+  }
+  .travel-info {
+    flex-direction: column;
+  }
+  .distance > .subheading2.text-color1, .travel-time > .subheading2.text-color1 {
+    display: none;
+  }
+  .distance >.heading3, .travel-time > .heading3 {
+    text-align: center;
+  }
+
+  /* Crew */
+  .crew {
+    background-image: url("./assets/crew/background-crew-mobile.jpg");
+  }
+  .crew-main-container {
+    flex-direction: column-reverse;
+    height: 90vh;
+}
+.separator-line-mobile{
+  display: block;
+  color: #51556e;
+  width: 80%;
+}
+.crew-left-col{
+  width: 85%;
+  flex-direction: column-reverse;
+}
+
+  /* Technology */
+  .technology {
+    background-image: url("./assets/technology/background-technology-mobile.jpg");
+    display: flex;
+    gap: 25px;
+  }
+  .technology-text-left-col{
+    width: 85%;
+  }
 }

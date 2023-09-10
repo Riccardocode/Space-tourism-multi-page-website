@@ -30,6 +30,7 @@ function injectCrewMembers(role) {
                   .join("")}
             </div>
         </div>
+        <hr class="separator-line-mobile">
         <div class="crew-right-col">
             <img
                 class="crew-member-image"
